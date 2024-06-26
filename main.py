@@ -1,14 +1,7 @@
-#from calc_app.commands.command_handler import CommandHandler
-#from calc_app.commands.add import addCommand
+
 from calc_app import CommandHandler, addCommand, subCommand, multiCommand, divideCommand, exitCommand, greetCommand, goodbyeCommand, menuCommand
 
-#def main():
-#    handler = CommandHandler()
-#    command = addCommand()
-#    command.execute()
 
-#if __name__ == "__main__":
- #   main()
 class App:
     def __init__(self):
         self.command_handler = CommandHandler()
@@ -23,7 +16,7 @@ class App:
        self.command_handler.register_command("goodbye", goodbyeCommand())
        self.command_handler.register_command("exit", exitCommand())
 
-       print("Type exit to exit")
+       print("Type exit to exit from Program")
        while True:
           self.command_handler.execute_command(input(">>>").strip())
 if __name__ == "__main__":
